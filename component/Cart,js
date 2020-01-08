@@ -1,0 +1,19 @@
+const Cart = function(prop) {
+    let sum = 0;
+  return {
+    name: "div",
+    className: "Cart",
+    children: () => `total Price ${sum} Rs`,
+    methods:{
+        updateSum(context,value){
+            sum+=value;
+            context.render();
+        },
+        reduceSum(context,value){
+            sum-=value;
+            context.render();
+        }
+    }
+  };
+};
+export default Cart;
